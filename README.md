@@ -1,3 +1,5 @@
+# ARSIR WILAYAH BERDASARKAN DATA CSV
+
 ## Langka 1
 - buat Layer baru
 - pertama masukan data (**Add Data**) modis berformat **csv**
@@ -32,8 +34,23 @@
 - kemudian **checklist use selected features**
 - lalu pilih intersect **the source layer feature** pada bagian spatial selection method for...
 - langkah terakh klik Apply lalu OK
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+# KONVERSI FILE HDF KE CSV (KASUS DATA MOD11A2 LST v061)
 
+## Langkah 1
+- load file berkestensi HDF
+- pilih **subset variabel** untuk ditampilkan bisa spesifik atau langsung dgn select all
+- klik OK dan yes terus
 
+## Langkah 2
+- klik kanan pada layer file HDF lalu pilih **Properties...**
+- pilih **Symbology** untuk melihat variasi dari temperature (kelvin. nantinya harus dikali 0.02 mendapatkan nilai asli suhu kelvin lalu dikurang - 273.15 dikonversi ke C)
+- lalu pilih **Color Ramp** biasanya merah-orange-hijau
+- lalu pilih **Invert** dan klik OK maka warna map akan berubah warna mengikuti kategori suhu
 
-
+## Langkah 3
+- selanjutnya untuk dijadikan point data
+- pilih Toolboxes -> System Tools Boxes -> **Spatial Analisys Tools -> Map Algebra**
+- lalu sesuaikan layer yg jadi targer pada **Layers and Baviabel**. Untuk melakukan konversi ke kelvin lalu ke celcius dari nilai asli temperature bisa dilakukan pada layar ini
+- kemudian tentukan folder dan nama file 
